@@ -111,50 +111,40 @@ export default function Queue() {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="Enter URL"
-          className="border p-2 w-full mb-2"
+          className="border p-2 w-full mb-2 rounded dark:bg-slate-800"
           required
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white p-2 rounded"
+          className="bg-blue-500 hover:bg-blue-600 transition-all text-white p-2 rounded"
         >
           Add to Queue
         </button>
       </form>
-      <div className="mb-4">
-        <label className="flex items-center">
-          <input
-            type="checkbox"
-            checked={direct}
-            onChange={(e) => setDirect(e.target.checked)}
-            className="mr-2"
-          />
-          Direct Download
-        </label>
-      </div>
       <div className="mb-4">
         <input
           type="text"
           value={apiInput}
           onChange={(e) => setApiInput(e.target.value)}
           placeholder="Enter Base API URL"
-          className="border p-2 w-full mb-2"
+          className="border p-2 w-full mb-2 rounded dark:bg-slate-800"
         />
         <button
           type="button"
           onClick={handleAPIUrlChange}
-          className="bg-blue-500 text-white p-2 rounded mr-2"
+          className="bg-blue-500 hover:bg-blue-600 transition-all text-white p-2 rounded mr-2"
         >
           Set Base API URL
         </button>
         <button
           type="button"
           onClick={handleAPIUrlDelete}
-          className="bg-red-500 text-white p-2 rounded"
+          className="bg-red-500 hover:bg-red-600 transition-all text-white p-2 rounded"
         >
           Delete Base API URL
         </button>
       </div>
+    
       {successMessage && (
         <p className="text-green-500 mb-4">{successMessage}</p>
       )}
@@ -164,9 +154,21 @@ export default function Queue() {
       {error && (
         <p className="text-red-500 mb-4">{error}</p>
       )}
+       <div className="mb-4">
+        <label className="flex items-center">
+          <input
+            type="checkbox"
+            checked={direct}
+            onChange={(e) => setDirect(e.target.checked)}
+            className="mr-2"
+            required
+          />
+          Direct Download
+        </label>
+      </div>
       <ul className="list-disc pl-5">
         {queue.map((item, index) => (
-          <li key={index} className="flex justify-between items-center mb-2">
+          <li key={index} className="flex justify-between items-center mb-2 p-3 bg-slate-200 dark:bg-slate-800 border-2 dark:border-slate-700 rounded">
             <span>{item}</span>
             {direct && (
               <span className="bg-yellow-500 text-white p-1 rounded">Direct</span>
@@ -174,13 +176,13 @@ export default function Queue() {
             <div>
               <button
                 onClick={() => handleDownload(item)}
-                className="bg-green-500 text-white p-1 rounded mr-2"
+                className="bg-green-500 hover:bg-green-600 transition-all text-white p-2.5 rounded mr-2"
               >
                 Download
               </button>
               <button
                 onClick={() => handleRemove(item)}
-                className="bg-red-500 text-white p-1 rounded"
+                className="bg-red-500 hover:bg-red-600 transition-all text-white p-2.5 rounded"
               >
                 Remove
               </button>

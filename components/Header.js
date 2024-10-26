@@ -11,12 +11,38 @@ const Header = () => {
       >
         <Image
           aria-hidden
-          src="/file.svg"
-          alt="File icon"
+          src="/home.svg"
+          alt="Home icon"
           width={16}
           height={16}
         />
         Home
+      </Link>
+      <Link
+        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        href="/form"
+      >
+        <Image
+          aria-hidden
+          src="/file.svg"
+          alt="Form icon"
+          width={16}
+          height={16}
+        />
+        Form
+      </Link>
+      <Link
+        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        href="/queue"
+      >
+        <Image
+          aria-hidden
+          src="/queue.svg"
+          alt="Queue icon"
+          width={16}
+          height={16}
+        />
+        Queue
       </Link>
       <Link
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -31,7 +57,7 @@ const Header = () => {
         />
         Check Rate Limit
       </Link>
-     {/*  <a
+      {/*  <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
         target="_blank"

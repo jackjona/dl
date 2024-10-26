@@ -1,3 +1,4 @@
+// Deprecated - view app/queue/page.js for the latest version
 "use client"
 import Link from 'next/link'
 import { useState, useEffect } from 'react'

@@ -20,19 +20,6 @@ const Header = () => {
       </Link>
       <Link
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="/form"
-      >
-        <Image
-          aria-hidden
-          src="/file.svg"
-          alt="Form icon"
-          width={16}
-          height={16}
-        />
-        Form
-      </Link>
-      <Link
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         href="/queue"
       >
         <Image
@@ -43,6 +30,19 @@ const Header = () => {
           height={16}
         />
         Queue
+      </Link>
+      <Link
+        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        href="/form"
+      >
+        <Image
+          aria-hidden
+          src="/file.svg"
+          alt="Form icon"
+          width={16}
+          height={16}
+        />
+        Form
       </Link>
       <Link
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"

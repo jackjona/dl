@@ -2,10 +2,9 @@
 "use client"
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { allowedDomains } from '../utils/config'
 
-const allowedDomains = ['pixeldrain.com', 'cdn.pixeldrain.com']
-
-export default function Queue() {
+export default function DeprecatedQueue() {
   const [url, setUrl] = useState('')
   const [queue, setQueue] = useState([])
   const [error, setError] = useState(null)

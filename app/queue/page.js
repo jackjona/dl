@@ -1,8 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react'
-
-const allowedDomains = ['pixeldrain.com', 'cdn.pixeldrain.com']
-const allowedAPIBaseDomains = ['workers.dev', 'cloudflare.com']
+import { allowedDomains, allowedAPIBaseDomains } from '../utils/config'
 
 export default function Queue() {
   const [url, setUrl] = useState('')
@@ -168,10 +166,10 @@ export default function Queue() {
       </div>
       <ul className="list-disc pl-5">
         {queue.map((item, index) => (
-          <li key={index} className="flex justify-between items-center mb-2 p-3 bg-slate-200 dark:bg-slate-800 border-2 dark:border-slate-700 rounded">
+          <li key={index} className="flex flex-col sm:flex-row justify-between items-center mb-2 p-3 bg-slate-200 dark:bg-slate-800 border-2 dark:border-slate-700 rounded">
             <span>{item}</span>
             {direct && (
-              <span className="bg-yellow-500 text-white p-1 rounded">Direct</span>
+              <span class="bg-yellow-100 text-yellow-800 text-md me-2 px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300 my-4">Direct</span>
             )}
             <div>
               <button

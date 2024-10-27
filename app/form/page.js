@@ -18,7 +18,7 @@ export default function Form() {
           throw new Error('Invalid domain');
         }
   
-        const res = await fetch('/api/proxy', {
+        const res = await fetch('/api/form-proxy', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

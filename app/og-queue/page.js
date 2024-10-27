@@ -34,7 +34,7 @@ export default function DeprecatedQueue() {
 
   const handleDownload = async (downloadUrl) => {
     try {
-      const res = await fetch('/api/proxy', {
+      const res = await fetch('/api/form-proxy', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

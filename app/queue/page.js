@@ -46,7 +46,7 @@ export default function Queue() {
         const directUrl = `${baseAPIUrl}?origin=https://pixeldrain.com/api/file/${fileId}?download`
         window.location.href = directUrl
       } else {
-        const res = await fetch('/api/proxy', {
+        const res = await fetch('/api/form-proxy', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -1,4 +1,4 @@
-# Origin Proxy
+# Next.js Origin Proxy
 
 Download files from a specified origin. Add to the download queue. Get a proxied download or transform the direct url.
 
